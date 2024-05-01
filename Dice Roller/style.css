@@ -1,0 +1,25 @@
+.container{
+    text-align: center;
+    font-size: 2rem;
+
+}
+input{
+   text-align: center;
+   font-size:2rem;
+   width:150px;
+}
+#roll{
+    font-size: 1.5rem;
+    background-color: rgb(17, 191, 254);
+    color:white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;  
+}
+#roll:hover{
+  background-color: rgb(66, 149, 170);
+}
+#roll:active{
+    background-color: rgb(5, 98, 98);
+}

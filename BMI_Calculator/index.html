@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-widthinitial-scale=1.0">
+    <title>BMI  calculator</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px;
+            
+
+        }
+        input {
+        margin-bottom: 10px; 
+        box-sizing: border-box;
+        display: inline-block;
+     
+    }
+    button {
+        margin-left: 130px;
+        background-color: rgba(19, 163, 38, 0.966);
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: rgb(240, 56, 47);
+    }
+    #results{
+        margin-top: 5px;
+        margin-left: 200px;  
+        border:2px solid black;
+        height:20px;
+        
+        
+    }
+    .container{
+        height:50px;
+        width:100px;
+        border: 2px solid black;
+        margin-bottom: 10px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: blanchedalmond;
+       
+
+
+    }
+    
+    #red{
+        background-color: rgb(219, 62, 42);
+    
+    }
+    #green{
+        background-color: rgb(20, 205, 66);
+    }
+    #orange{
+        background-color: orange;
+    }
+    #darkred{
+        background-color: rgb(152, 9, 9);
+    }
+    .box{
+        display: flex;
+        padding: 5px;
+        margin-left: 600px;
+    
+    }
+   
+    </style>
+</head>
+<body>
+    <h1> BMI CALCULATOR</h1>
+   <div class="main">
+    <form>
+        
+        <label><b>Height in c.m:</b></label><input type ="text" id="height" placeholder="Enter your height"><br>
+        
+        <label><b>Weight in k.g:</b></label>
+        <input  type="text" id="weight" placeholder="Enter your weight"><br>
+    
+    <button >CALCULATE</button>
+    <div id="results"> </div>
+    </form>
+</div>
+<div class="box">
+<div class="container" id="red"><span>underweight &lt; 18.5
+</span>
+    
+</div>
+<div class="container" id="green">Normal weight 18.5-25</div>
+<div class="container" id="orange">Overweight 25-30</div>
+<div class="container" id="darkred">Obese &gt;30</div>
+</div>
+    
+</body>
+<script src="script.js"></script>
+</html>

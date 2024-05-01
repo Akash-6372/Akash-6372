@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Conversion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <h1>Temperature Conversion</h1>
+        <input type="number" id="inputvalue"><br><br>
+        <input type="radio" id="toFarhenite" name="tempr">
+        <label for="toFarhenite">Celsius ➡️ Fahrenheit</label><br>
+        <input type="radio" id="toCelcius" name="tempr">
+        <label for="toCelcius">Fahrenheit ➡️ Celsius</label><br>
+        <button id="submit" onclick="convert()">Submit</button>
+        <h3 id="result"></h3>
+    </form>
+    
+    <script>
+        const temp = document.getElementById("inputvalue");
+        const toFarhenite = document.getElementById("toFarhenite");
+        const toCelcius = document.getElementById("toCelcius");
+        const result = document.getElementById("result");
+        
+        function convert() {
+            if (toFarhenite.checked) {
+                const tempValue = parseFloat(temp.value);
+                const tempr = (tempValue * 9/5) + 32;
+                result.innerHTML = tempr.toFixed(1) + "°F";
+            } else if (toCelcius.checked) {
+                const tempValue = parseFloat(temp.value);
+                const tempr = (tempValue - 32) * 5/9;
+                result.innerHTML = tempr.toFixed(1) + "°C";
+            } else {
+                result.innerHTML = "Select a unit";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Smartwatch</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    transition: background-color 0.5s ease;
+  }
+
+  .watch {
+    width: 200px;
+    height: 300px;
+    background-color: #000;
+    border-radius: 50%;
+    position: relative;
+    perspective: 1000px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .screen {
+    width: 150px;
+    height: 200px;
+    background-color: #eee;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .button {
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #555;
+  }
+</style>
+</head>
+<body>
+<div class="watch">
+  <div class="screen">
+    <!-- Content can be added here -->
+    <span>Smartwatch</span>
+  </div>
+  <div class="button"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
